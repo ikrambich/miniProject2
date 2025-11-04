@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build MPI Program",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "hybrid_sort.c",                    // Your source file
+                "-o", "hybrid_sort",               // Output executable name
+                "-I", "C:/Program Files (x86)/Microsoft SDKs/MPI/Include", // Include directory
+                "-L", "C:/Program Files (x86)/Microsoft SDKs/MPI/Lib/x64", // Library directory
+                "-lmsmpi"                          // MS-MPI library
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
